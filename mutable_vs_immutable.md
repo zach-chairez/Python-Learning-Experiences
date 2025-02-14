@@ -66,7 +66,7 @@ new_string = my_string  # Both variables point to the same string object!
 new_string += "jeff"  # Add "jeff" to new_string
 print(my_string)  # Output: 'my name is'
 ```
-Here, modifying `new_string` does not change `my_string` because a new string object was created.
+Here, modifying `new_string` does not change `my_string` because a new string object was created from an immutable one.
 
 ## Copying Objects: Shallow vs. Deep Copy
 **Question:** What if want to copy the contents of a mutable object to a new variable so that we don't change the original object while updating the new variable? \ 
