@@ -2,7 +2,7 @@
 # Mutable vs. Immutable Objects in Python
 
 ## Introduction
-Understanding the difference between **mutable** and **immutable** objects in Python is crucial for understanding how Python manages memory, creating bug-free code, and developing a fundamental comprehension of object oriented programming.  I recently had a technical interview involving lists in Python which where a question similar to the following was asked:
+Understanding the difference between **mutable** and **immutable** objects in Python is crucial for understanding how Python manages memory, creating bug-free code, and developing a fundamental comprehension of object oriented programming.  I recently had a technical interview involving lists in Python - the following code and question were given:
 
 ```python
 cool_list = [1,2,3,4]
