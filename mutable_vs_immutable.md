@@ -39,9 +39,9 @@ These objects **can be modified in place**:
 Let's refer back to the original example from the introduction:
 ```python
 cool_list = [1,2,3,4]
-another_cool_list = cool_list # Both lists point to the same list!
+another_cool_list = cool_list # Both lists point to the same list object!
 another_cool_list.append(-1)
-print(cool_list) # If I change one list, I change the other similarly!
+print(cool_list) # If I change one list, I change the other!
 # Output:  [1,2,3,4,-1]
 ```
 Modifying ```another_cool_list``` automatically updates ```cool_list``` as they both point to the same list in memory.  
