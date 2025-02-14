@@ -91,7 +91,9 @@ print(original_list)  # Output: [[1, 23, 3], [4, 5, 6]]
 ```
 
 When we make a (shallow) copy of a mutable object, only the outer object points to a different object while the internal structures are still pointing to the same object.  
-It's still something I struggle with, but I know with more practice and experience, it will become more intuitive.  Here's another example:
+
+It's still something I struggle with, but I know with more practice and experience, it will become more intuitive. \
+Here's another example:
 
 ```python
 import copy
