@@ -103,12 +103,12 @@ copied_list = original_list.copy()
 # Copy - Method 2 for lists
 # copied_list = copy.copy(original_list)
 
-# Update the copied list's internal list [1,2,3] to [-1,-2,-3]
+# Update the copied list's internal list [1, 2, 3] to [-1, -2, -3]
 copied_list[0] = [-1,-2,-3]
 
 # Print contents of original list
-print(original_list)  # Output: [[1,2,3], [4, 5, 6]]
-print(copied_list) # Output: [[-1,-2,-3],[4,5,6]]  
+print(original_list)  # Output: [[1, 2, 3], [4, 5, 6]]
+print(copied_list) # Output: [[-1,-2,-3],[4, 5, 6]]  
 ```
 We see above that the original list was unaffected because we made a copy of the outer structure of ```original_list``` and not its internal structures.  
 If we want to avoid these nuances, we can use **deepcopies** instead!
@@ -116,8 +116,9 @@ If we want to avoid these nuances, we can use **deepcopies** instead!
 ### Deep Copy (Recursively copies all nested objects)
 ```python
 import copy
-original = [[1, 2, 3], [4, 5, 6]]
-deep_copy = copy.deepcopy(original)
-deep_copy[0][0] = 99
-print(original)  # Output: [[1, 2, 3], [4, 5, 6]]
+original_list = [[1, 2, 3], [4, 5, 6]]
+deep_copied_list = copy.deepcopy(original_list)
+deep_copied_list[0][0] = 23
+print(original_list)  # Output: [[1, 2, 3], [4, 5, 6]]
+print(deep_copied_list) # Output: [[23, 2, 3],[4, 5, 6]]
 ```
