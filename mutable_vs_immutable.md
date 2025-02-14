@@ -1,3 +1,4 @@
+
 # Mutable vs. Immutable Objects in Python
 
 ## Introduction
@@ -28,10 +29,10 @@ These objects **can be modified in place**:
 
 | Type | Example |
 |------|---------|
-| `list` | `[1, 2, 3]` |
-| `dict` | `{"a": 1, "b": 2}` |
+| `list` | `["bloop", 23, "hello moto"]` |
+| `dict` | `{"country": vietname, "population": "a few"}` |
 | `set` | `{1, 2, 3}` |
-| `bytearray` | `bytearray(b"hello")` |
+| `bytearray` | `bytearray(b"2356")` |
 | Custom Objects | Instances of user-defined classes with mutable attributes |
 
 ### Example:
@@ -52,31 +53,50 @@ These objects **cannot be modified** after creation:
 | Type | Example |
 |------|---------|
 | `int` | `42` |
-| `float` | `3.14` |
-| `str` | `'hello'` |
-| `tuple` | `(1, 2, 3)` |
+| `float` | `3.14159` |
+| `str` | `'pineapple belongs on pizza'` |
+| `tuple` | `(-1, 0, 1)` |
 | `frozenset` | `frozenset({1, 2, 3})` |
-| `bytes` | `b"hello"` |
+| `bytes` | `b"salutations"` |
 
 ### Example:
 ```python
-x = "hello"
-y = x  # Both variables point to the same string object
-x += " world"  # Creates a new string object, does not modify the original
-print(y)  # Output: 'hello'
+my_string = "my name is"
+new_string = my_string  # Both variables point to the same string object!
+new_string += "jeff"  # Add "jeff" to new_string
+print(my_string)  # Output: 'my name is'
 ```
-Here, modifying `x` does not change `y` because a new string object was created.
+Here, modifying `new_string` does not change `my_string` because a new string object was created.
 
 ## Copying Objects: Shallow vs. Deep Copy
-If you need an independent copy of a mutable object, use:
+**Question:** What if want to copy the contents of a mutable object to a new variable so that we don't change the original object while updating the new variable?
+**Answer:** We make copies!
 
 ### Shallow Copy (Only copies the top-level object, not nested structures)
 ```python
 import copy
-original = [[1, 2, 3], [4, 5, 6]]
-shallow_copy = copy.copy(original)
-shallow_copy[0][0] = 99
-print(original)  # Output: [[99, 2, 3], [4, 5, 6]]
+original_list = [[1, 2, 3], [4, 5, 6]]
+
+# Copy - Method 1 for lists
+copied_list = original_list.copy()
+
+# Copy - Method 2 for lists
+# copied_list = copy.copy(original_list)
+
+# Update the value 2 to 23
+copied_list[0][1] = 23
+
+# Print contents of original list
+print(original_list)  # Output: [[1, 23, 3], [4, 5, 6]]
+```
+
+When we make a (shallow) copy of a mutable object, only the outer object points to a different object while the internal structures are still pointing to the same object.  
+It's still something I struggle with, but I know with more practice and experience, it will become more intuitive.  Here's another example:
+
+```python
+
+
+
 ```
 
 ### Deep Copy (Recursively copies all nested objects)
@@ -87,10 +107,6 @@ deep_copy = copy.deepcopy(original)
 deep_copy[0][0] = 99
 print(original)  # Output: [[1, 2, 3], [4, 5, 6]]
 ```
-
-## When to Use Mutable vs. Immutable Objects?
-- **Use mutable objects** when you need to modify data in place (e.g., appending to lists, updating dictionaries).
-- **Use immutable objects** when you need to ensure data integrity (e.g., using tuples as dictionary keys, string manipulation, multi-threaded programming).
 
 ## Conclusion
 Understanding mutability in Python helps avoid unintended side effects, improves memory efficiency, and makes debugging easier. Mastering this concept is valuable for both performance optimization and code reliability.
