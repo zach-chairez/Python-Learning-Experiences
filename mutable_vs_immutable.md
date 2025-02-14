@@ -84,7 +84,7 @@ copied_list = original_list.copy()
 # Copy - Method 2 for lists
 # copied_list = original_list[:]
 
-# Copy - Method 3 for lists and all other immutable objects
+# Copy - Method 3 for lists and all other objects
 # copied_list = copy.copy(original_list)
 
 # Update the value 2 to 23
@@ -109,6 +109,9 @@ original_list = [[1, 2, 3], [4, 5, 6]]
 copied_list = original_list.copy()
 
 # Copy - Method 2 for lists
+# copied_list = original_list[:]
+
+# Copy - Method 3 for lists and all other objects
 # copied_list = copy.copy(original_list)
 
 # Update the copied list's internal list [1, 2, 3] to [-1, -2, -3]
