@@ -94,10 +94,24 @@ When we make a (shallow) copy of a mutable object, only the outer object points 
 It's still something I struggle with, but I know with more practice and experience, it will become more intuitive.  Here's another example:
 
 ```python
+import copy
+original_list = [[1, 2, 3], [4, 5, 6]]
 
+# Copy - Method 1 for lists
+copied_list = original_list.copy()
 
+# Copy - Method 2 for lists
+# copied_list = copy.copy(original_list)
 
+# Update the copied list's internal list [1,2,3] to [-1,-2,-3]
+copied_list[0] = [-1,-2,-3]
+
+# Print contents of original list
+print(original_list)  # Output: [[1,2,3], [4, 5, 6]]
+print(copied_list) # Output: [[-1,-2,-3],[4,5,6]]  
 ```
+We see above that the original list was unaffected because we made a copy of the outer structure of ```original_list``` and not its internal structures.  
+If we want to avoid these nuances, we can use **deepcopies** instead!
 
 ### Deep Copy (Recursively copies all nested objects)
 ```python
