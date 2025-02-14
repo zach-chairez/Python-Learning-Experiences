@@ -1,13 +1,27 @@
 # Mutable vs. Immutable Objects in Python
 
 ## Introduction
-Understanding the difference between **mutable** and **immutable** objects in Python is crucial for writing efficient and bug-free code. This concept plays a significant role in how Python manages memory, object references, and performance.
+Understanding the difference between **mutable** and **immutable** objects in Python is crucial for understanding how Python manages memory, creating bug-free code, and developing a fundamental comprehension of object oriented programming.  I recently had a technical interview involving lists in Python which where a question similar to the following was asked:
+
+```python
+cool_list = [1,2,3,4]
+another_cool_list = cool_list
+another_cool_list.append(-1)
+print(cool_list)
+```
+
+**Question:**  What will ```cool_list``` print?  
+**My answer:**  ```[1,2,3,4]```
+**Correct answer:** ```[1,2,3,4,-1]```  
+
+I beat myself over the head after the interview as I realized my mistake.  
+This helpful guide is for myself and all those that wish to not make the same mistake I did!  
+Let's get started.
+
 
 ## What is Mutability?
 - **Mutable Objects**: Can be modified after creation.
 - **Immutable Objects**: Cannot be changed once created.
-
-Mutability affects how objects are assigned, copied, and passed as arguments in functions.
 
 ## Common Mutable Objects
 These objects **can be modified in place**:
@@ -21,13 +35,16 @@ These objects **can be modified in place**:
 | Custom Objects | Instances of user-defined classes with mutable attributes |
 
 ### Example:
+Let's refer back to the original example from the introduction:
 ```python
-my_list = [1, 2, 3]
-copy_list = my_list  # Both variables point to the same list
-copy_list.append(4)
-print(my_list)  # Output: [1, 2, 3, 4]
+cool_list = [1,2,3,4]
+another_cool_list = cool_list # Both lists point to the same list!
+another_cool_list.append(-1)
+print(cool_list) # If I change one list, I change the other similarly!
+# Output:  [1,2,3,4,-1]
 ```
-Here, modifying `copy_list` also affects `my_list` because both reference the same object in memory.
+Modifying ```another_cool_list``` automatically updates ```cool_list``` as they both point to the same list in memory.  
+### This behavior is similar to all mutable objects. ###
 
 ## Common Immutable Objects
 These objects **cannot be modified** after creation:
@@ -77,6 +94,3 @@ print(original)  # Output: [[1, 2, 3], [4, 5, 6]]
 
 ## Conclusion
 Understanding mutability in Python helps avoid unintended side effects, improves memory efficiency, and makes debugging easier. Mastering this concept is valuable for both performance optimization and code reliability.
-
----
-If you found this useful, feel free to contribute or ask questions! 🚀
