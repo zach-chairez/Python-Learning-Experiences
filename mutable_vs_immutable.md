@@ -69,7 +69,7 @@ print(my_string)  # Output: 'my name is'
 Here, modifying `new_string` does not change `my_string` because a new string object was created.
 
 ## Copying Objects: Shallow vs. Deep Copy
-**Question:** What if want to copy the contents of a mutable object to a new variable so that we don't change the original object while updating the new variable?
+**Question:** What if want to copy the contents of a mutable object to a new variable so that we don't change the original object while updating the new variable? \ 
 **Answer:** We make copies!
 
 ### Shallow Copy (Only copies the top-level object, not nested structures)
@@ -121,6 +121,3 @@ deep_copy = copy.deepcopy(original)
 deep_copy[0][0] = 99
 print(original)  # Output: [[1, 2, 3], [4, 5, 6]]
 ```
-
-## Conclusion
-Understanding mutability in Python helps avoid unintended side effects, improves memory efficiency, and makes debugging easier. Mastering this concept is valuable for both performance optimization and code reliability.
