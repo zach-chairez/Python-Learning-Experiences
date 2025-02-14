@@ -69,7 +69,8 @@ print(my_string)  # Output: 'my name is'
 Here, modifying `new_string` does not change `my_string` because a new string object was created from an immutable one.
 
 ## Copying Objects: Shallow vs. Deep Copy
-**Question:** What if want to copy the contents of a mutable object to a new variable so that we don't change the original object while updating the new variable? \ 
+**Question:** What if want to copy the contents of a mutable object to a new variable so that we don't change the original object while updating the new variable? 
+
 **Answer:** We make copies!
 
 ### Shallow Copy (Only copies the top-level object, not nested structures)
@@ -90,9 +91,11 @@ copied_list[0][1] = 23
 print(original_list)  # Output: [[1, 23, 3], [4, 5, 6]]
 ```
 
-When we make a (shallow) copy of a mutable object, only the outer object points to a different object while the internal structures are still pointing to the same object.  
+When we make a (shallow) copy of a mutable object, only the outer object points to a different object while the 
+internal structures are still pointing to the same object.  
 
-It's still something I struggle with, but I know with more practice and experience, it will become more intuitive. \
+It's still something I struggle with, but I know with more practice and experience, it will become more intuitive.
+
 Here's another example:
 
 ```python
@@ -113,6 +116,7 @@ print(original_list)  # Output: [[1, 2, 3], [4, 5, 6]]
 print(copied_list) # Output: [[-1,-2,-3],[4, 5, 6]]  
 ```
 We see above that the original list was unaffected because we made a copy of the outer structure of ```original_list``` and not its internal structures.  
+
 If we want to avoid these nuances, we can use **deepcopies** instead!
 
 ### Deep Copy (Recursively copies all nested objects)
