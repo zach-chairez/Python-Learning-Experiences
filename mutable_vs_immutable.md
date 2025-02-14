@@ -117,8 +117,12 @@ If we want to avoid these nuances, we can use **deepcopies** instead!
 ```python
 import copy
 original_list = [[1, 2, 3], [4, 5, 6]]
+
+# Create a deep copy and update an entry
 deep_copied_list = copy.deepcopy(original_list)
 deep_copied_list[0][0] = 23
+
+# Print results
 print(original_list)  # Output: [[1, 2, 3], [4, 5, 6]]
 print(deep_copied_list) # Output: [[23, 2, 3],[4, 5, 6]]
 ```
