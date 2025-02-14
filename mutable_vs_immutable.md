@@ -33,7 +33,7 @@ These objects **can be modified in place**:
 | `dict` | `{"country": vietnam, "population": "a few"}` |
 | `set` | `{1, 2, 3}` |
 | `bytearray` | `bytearray(b"2356")` |
-| Custom Objects | Instances of user-defined classes with mutable attributes |
+| Custom Objects | When we create an instance of a class with defined methods |
 
 ### Example:
 Let's refer back to the original example from the introduction:
