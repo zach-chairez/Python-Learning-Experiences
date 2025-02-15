@@ -94,7 +94,7 @@ account.deposit(500)
 print(account.get_balance())  # Output: 1500
 account.withdraw(200)
 print(account.get_balance()) # Output: 1300
-print(account.balance()) # Output:  BankAccount' object has no attribute 'balance'
+print(account.balance()) # Output:  'BankAccount' object has no attribute 'balance'
 ```
 
 We see that the attribute ```balance``` is not directly accessible, but in actuality it is accessible if the user knows that balance is a private attribute.  They could directly modify ```balance``` as follows:
