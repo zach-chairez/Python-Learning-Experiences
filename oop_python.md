@@ -1,5 +1,12 @@
 # Introduction to Object-Oriented Programming (OOP) in Python
 
+## Motivation
+Previously, at the end of a technical interview, I asked:  "What Python concepts would you recommend for someone like me applying to this (Data Scientist) role to study more of?"
+
+His answer?  Object Oriented Programming.
+
+And because of that, here we are!  I hope this introduction and soft exploration helps you as much as it's helped me.  
+
 ## What is Object-Oriented Programming?
 Object-Oriented Programming (OOP) is a programming paradigm that structures programs using **objects**, which bundle both **data (attributes)** and **functions (methods)** together. This approach improves code organization, promotes reusability, and mirrors real-world entities more naturally than procedural programming.
 
