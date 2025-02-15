@@ -9,8 +9,8 @@
 - **Heterogeneous**: Can store different data types.
 
 ### Methods:
-- `append(value)`: Adds an element to the end of the list.
-- `extend(iterable)`: Appends elements from an iterable.
+- `append(value)`: Adds a single element to the end of the list.
+- `extend(iterable)`: Can add multiple elements to the end of a list.
 - `insert(index, value)`: Inserts a value at a specified index.
 - `remove(value)`: Removes the first occurrence of a value.
 - `pop(index)`: Removes and returns an element at the given index.
