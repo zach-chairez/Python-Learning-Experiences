@@ -1,4 +1,4 @@
-# Python Data Types: Lists, Tuples, Sets, and Dictionaries
+# The Big 4 Data Structures of Python: Lists, Tuples, Sets, and Dictionaries
 
 ## Lists
 ### Attributes:
