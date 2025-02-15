@@ -1,3 +1,4 @@
+<div style="max-width: 700px; margin: auto;">
 # Introduction to Object-Oriented Programming (OOP) in Python
 
 ## What is Object-Oriented Programming?
@@ -87,9 +88,6 @@ my_tesla = ElectricCar()
 print(my_car.start_engine())  # Output: Engine started with a key!
 print(my_tesla.start_engine())  # Output: Engine started with a button!
 ```
-
+</div>
 ## Conclusion
 OOP is like organizing your code into smart containers that interact with each other. Mastering OOP will help you write cleaner, more efficient programs. So go ahead—experiment, break things, and have fun learning!
-
----
-If you found this useful, feel free to experiment and contribute! 🚀
