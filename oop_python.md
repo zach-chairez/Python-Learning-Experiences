@@ -34,6 +34,73 @@ Think about how we interact with the world. You don't need to know the inner wor
   - Example: Think of a blueprint for a house. You can make modifications while keeping the basic structure intact.
 - **Polymorphism**: Enable different classes to share a common interface with varied implementations.
   - Example: A USB port can work with a keyboard, mouse, or flash drive—all different devices, but they share the same interface.
+ 
+## Where Else Do We See OOP in Python?
+Python is fundamentally object-oriented, and many built-in data types and structures adhere to OOP principles:
+
+1. **Everything is an Object**
+   - Integers and floats have methods!
+   
+   ```python
+   x = 10
+   print(x.__add__(5))  # Equivalent to x + 5
+   print((3.14).real)  # Output:  3.14 since the real part is itself
+   ```
+
+2. **Built-in Data Structures Are Classes**
+   - Lists, tuples, sets, and dictionaries all have built-in methods that follow OOP principles.
+   
+   ```python
+   # Lists
+   my_list = [1, 2, 3]
+   my_list.append(4)  # `append` is a method from the list class
+   print(my_list)  # Output: [1, 2, 3, 4]
+
+   # Tuples
+   my_lovely_tuple = (-1,0,1)
+   print(my_love_tuple.count(0)) # Output: 1, since 0 appears 1-time
+
+   # Sets
+   super_set = {0,1,-2,3}
+   super_set.remove(-2)
+   print(super_set) # Output: {0,-1,3}
+
+   # Dictionaries
+   i_like_books = {"a": 1, "b": 2}
+   i_like_books.update({"b": 20, "c": 30})
+   print(i_like_books)  # Output:  {'a': 1, 'b': 20, 'c': 30}
+   
+   ```
+
+3. **Functions Are Objects Too!**
+   - In Python, functions can be assigned to variables and passed around like objects.
+   
+   ```python
+   def greet():
+       return "Hello!"
+   
+   say_hello = greet  # Assigning function to a variable
+   print(say_hello())  # Output: Hello!
+   ```
+
+4. **Modules and Classes Are Objects**
+   - Even Python modules are objects!
+   
+   ```python
+   import math
+   print(math.pi)  # `pi` is an attribute of the `math` module
+   print(math.sqrt(16))  # `sqrt` is a method of the `math` module
+   ```
+
+5. **Metaclasses and Type System**
+   - Classes themselves are objects of the `type` class.
+   
+   ```python
+   class Example:
+       pass
+   
+   print(type(Example))  # Output: <class 'type'>
+   ```
 
 ## Getting Started with OOP in Python
 
@@ -94,19 +161,8 @@ account.deposit(500)
 print(account.get_balance())  # Output: 1500
 account.withdraw(200)
 print(account.get_balance()) # Output: 1300
-print(account.balance()) # Output:  'BankAccount' object has no attribute 'balance'
+print(account.__balance()) # Output:  'BankAccount' object has no attribute 'balance'
 ```
-
-We see that the attribute ```balance``` is not directly accessible, but in actuality it is accessible if the user knows that balance is a private attribute.  They could directly modify ```balance``` as follows:
-
-```python
-account.__balance = -2356
-print(account.__balance) # Output: -2356
-```
-
-Python simply "name-mangles" balance so that it's harder to access, but not impossible.
-Its utility is still not completely clear to me - what do you think about Encapsulation?
-
 
 ### Abstraction: Hiding the Complexity
 Abstraction helps simplify complex systems by hiding unnecessary details and exposing only what's needed. Think about a TV remote—you press a button to change channels, but you don’t need to know how the remote sends signals to the TV.
