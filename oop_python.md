@@ -8,7 +8,18 @@ His answer?  Object Oriented Programming.
 And because of that, here we are!  I hope this introduction and soft exploration helps you as much as it's helped me.  
 
 ## What is Object-Oriented Programming?
-Object-Oriented Programming (OOP) is a programming paradigm that structures programs using **objects**, which bundle both **data (attributes)** and **functions (methods)** together. This approach improves code organization, promotes reusability, and mirrors real-world entities more naturally than procedural programming.
+Object-Oriented Programming (OOP) is a programming style that structures programs using **objects**, which bundle both **data (attributes)** and **functions (methods)** together. 
+This approach improves code organization, readability, and may help with understanding how real world structures work.   
+Here are some resources I found useful while making this page and for general reading:
+
+### Practice Problems
+- [OOP Practice Problems](https://www.w3resource.com/python-exercises/oop/index.php)
+- [More OOP Practice](https://pynative.com/python-object-oriented-programming-oop-exercise/)
+- [Even More OOP Practice!](https://www.geeksforgeeks.org/python-exercises-practice-questions-and-solutions/#python-oops-exercises)
+### High Level Overview
+- [OOP in Python](https://www.geeksforgeeks.org/python-oops-concepts/)
+- [OOP in Python for Beginners (Video)](https://www.youtube.com/watch?v=JeznW_7DlB0)
+- [Another Video!](https://www.youtube.com/watch?v=0XR_91AfgZI)
 
 ### Why Use OOP?
 Think about how we interact with the world. You don't need to know the inner workings of a car engine to drive—it just has a steering wheel, gas pedal, and brakes. OOP follows the same idea: it hides complexity and lets us interact with objects in an intuitive way.
