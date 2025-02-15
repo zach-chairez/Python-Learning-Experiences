@@ -40,7 +40,7 @@ Think about how we interact with the world. You don't need to know the inner wor
 ### Defining a Simple Class
 Have you ever thought about how you would model real-world objects in code? Imagine you're trying to describe an animal. How would you structure its characteristics and behaviors?
 
-A **class** is a blueprint for creating objects.
+A **class** is a blueprint for creating objects in order to create a reusable, organized, and elegant way to store functions and data.  
 
 ```python
 class Animal:
@@ -49,28 +49,41 @@ class Animal:
         self.species = species
     
     def make_sound(self, sound):
-        return f"{self.name} says {sound}!"
+        return f"{self.name} the {self.species} says {sound}!"
 
 # Creating an animal instance
-dog = Animal("Buddy", "Dog")
-cat = Animal("Whiskers", "Cat")
+dog = Animal("Bartholomew", "Dog")
+cat = Animal("Captain Bowtie", "Cat")
 
-print(dog.make_sound("Woof"))  # Output: Buddy says Woof!
-print(cat.make_sound("Meow"))  # Output: Whiskers says Meow!
+print(dog.make_sound("Bark Bark"))  # Output: Bartholomew the Dog says Bark Bark!
+print(cat.make_sound("Meoooooww"))  # Output: Captain Bowtie the Cat says Meoooooww!
 ```
 
-Can you think of another animal you could create using this class? Try it out!
+Since we made: ```class Animal```, we can create an endless number of combinations of instances of it by creating the variables ```dog``` and ```cat``` with their own unique inputs.  
+
+Can we think of other types of relationshsips like the example above that would call for a ```Class```? 
 
 ### Encapsulation: Protecting Data
-Encapsulation ensures that an object's internal state is protected from unwanted changes. Imagine a bank account: you wouldn’t want just anyone to modify your balance!
+Encapsulation attempts to protect a class's instance by restricting direct modifications, ensuring that changes occur only through controlled interactions. 
+
+Consider a bank account where deposits and withdrawals should be the ONLY way to update your balance, i.e., you should never modify the balance directly. Instead, encapsulation allows you to enforce this rule by restricting direct access and requiring all changes to go through well-defined methods. 
+
+However, there is nuance to this.  We'll say now that it's ***not really protected***, but merely made more difficult to access.  
 
 ```python
 class BankAccount:
-    def __init__(self, balance):
-        self.__balance = balance  # Private attribute
+    def __init__(self, opening_balance):
+        # Double underscore denotes a private attribute.
+        self.__balance = opening_balance  
     
     def deposit(self, amount):
         self.__balance += amount
+
+    def withdraw(self,amount):
+        if amount > self__balance:
+          return "Insufficient funds!"
+        else:
+          self.__balance -= amount
     
     def get_balance(self):
         return self.__balance
@@ -79,7 +92,21 @@ class BankAccount:
 account = BankAccount(1000)
 account.deposit(500)
 print(account.get_balance())  # Output: 1500
+account.withdraw(200)
+print(account.get_balance()) # Output: 1300
+print(account.balance()) # Output:  BankAccount' object has no attribute 'balance'
 ```
+
+We see that the attribute ```balance``` is not directly accessible, but in actuality it is accessible if the user knows that balance is a private attribute.  They could directly modify ```balance``` as follows:
+
+```python
+account.__balance = -2356
+print(account.__balance) # Output: -2356
+```
+
+Python simply "name-mangles" balance so that it's harder to access, but not impossible.
+Its utility is still not completely clear to me - what do you think about Encapsulation?
+
 
 ### Abstraction: Hiding the Complexity
 Abstraction helps simplify complex systems by hiding unnecessary details and exposing only what's needed. Think about a TV remote—you press a button to change channels, but you don’t need to know how the remote sends signals to the TV.
