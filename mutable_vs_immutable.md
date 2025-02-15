@@ -12,7 +12,7 @@ print(cool_list)
 ```
 
 **Question:**  What will ```cool_list``` print?  
-**My answer:**  ```[1,2,3,4]```
+**My answer:**  ```[1,2,3,4]```  
 **Correct answer:** ```[1,2,3,4,-1]```  
 
 I beat myself over the head after the interview as I realized my mistake.  
