@@ -1,5 +1,12 @@
 # The Big 4 Data Structures of Python: Lists, Tuples, Sets, and Dictionaries
 
+## References:
+- [Lists](https://www.w3schools.com/python/python_ref_list.asp)
+- [Dictionaries](https://www.w3schools.com/python/python_ref_dictionary.asp)
+- [Tuples](https://www.w3schools.com/python/python_ref_tuple.asp)
+- [Sets](https://www.w3schools.com/python/python_ref_set.asp)
+- [Other structures not listed in this document](https://www.w3schools.com/python/python_reference.asp)
+
 ## Lists
 ### Attributes:
 - **Ordered**: Lists maintain the order of elements.
