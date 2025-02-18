@@ -65,7 +65,7 @@ NumPy (Numerical Python) is the core library for numerical computing in Python. 
 ### Overview
 pandas is a powerful library for data manipulation and analysis. It provides data structures like Series and DataFrame to handle structured data efficiently.
 
-### Data Structures
+### Data Structures (mutable)
 - `pandas.Series` - One-dimensional labeled array
 - `pandas.DataFrame` - Two-dimensional labeled data structure
 
